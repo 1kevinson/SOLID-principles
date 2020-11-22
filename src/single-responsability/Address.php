@@ -1,5 +1,6 @@
 <?php
 
+// One class - One Responsibility
 class Address
 {
     private string $street;
