@@ -1,9 +1,6 @@
 <?php
 
-// The purpose of Single Responsibility is reusability
-
-// One class - One Responsibility
-final class Address
+class Address
 {
     private string $street;
     private string $number;
@@ -59,5 +56,4 @@ final class Address
 }
 
 
-$address = new Address("avenue baudelaire", "12", "78500", "sartrouville", "France");
-Address::createFromGoogleMap(new GoogleMap(), $address);
+
