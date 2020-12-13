@@ -1,20 +1,32 @@
-<?php 
+<?php
 
-class Employee {
-  private $name;
+class Employee
+{
+    private string $name;
 
-  // Getters and Setters
-  function __call($method,$parameter) {
-          $variable = strtolower(substr($method,3));
-          if (!strncasecmp($method,'get',3) && !in_array($variable,$this->private)) return $this->$variable;
-          if (!strncasecmp($method,'set',3) && !in_array($variable,$this->private)) $this->$variable = $parameter[0];
-  }
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+
 }
 
-class TimeSheetReport{
-    function printReport(Employee $employee) {
-      
+class TimeSheetReport
+{
+    public function printReport(Employee $employee): string
+    {
+        return $employee->getName();
     }
 }
 
-?>
