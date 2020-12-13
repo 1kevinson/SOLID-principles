@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * A class should have just one reason to change.
+ * */
+
 class Employee
 {
     private string $name;
