@@ -62,7 +62,7 @@ class Ground implements Shipping
 {
     public function getCost(Order $order): int
     {
-        if ($this->orderNumberGreaterThan100($order)) return 0;
+        if ($this->orderNumberGreaterThan50($order)) return 0;
         return $order->getTotal() * 0.15;
     }
 
@@ -71,7 +71,7 @@ class Ground implements Shipping
         return $order->getDateOrder();
     }
 
-    private function orderNumberGreaterThan100(Order $order): bool
+    private function orderNumberGreaterThan50(Order $order): bool
     {
         return $order->getTotal() > 100;
     }
