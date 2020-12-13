@@ -1,5 +1,6 @@
 <?php
 
+// Can be replace by WritableDocument
 class Document
 {
     private string $data;
@@ -10,6 +11,7 @@ class Document
     }
 }
 
+// Can replace Document
 class WritableDocument extends Document
 {
     public function save()
